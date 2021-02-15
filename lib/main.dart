@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:getx_demo/core/services/characters_api.dart';
+import 'package:getx_demo/presentation/controllers/characters_controller.dart';
 import 'package:getx_demo/presentation/ui/characters_screen.dart';
 
 void main() {
@@ -29,5 +30,10 @@ class AppBindings extends Bindings {
   @override
   dependencies() {
     Get.lazyPut<CharactersApi>(() => CharactersApiImpl());
+    Get.lazyPut(
+      () => CharactersController(
+        charactersApi: Get.find<CharactersApi>(),
+      ),
+    );
   }
 }

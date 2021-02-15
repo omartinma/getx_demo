@@ -19,7 +19,7 @@ class CharactersScreen extends StatelessWidget {
         ),
       ),
       body: GetBuilder<CharactersController>(
-        init: CharactersController(charactersApi: Get.find<CharactersApi>()),
+        //init: CharactersController(charactersApi: Get.find<CharactersApi>()),
         builder: (controller) {
           if (controller.characters == null || controller.characters.isEmpty)
             return Center(
