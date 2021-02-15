@@ -14,6 +14,10 @@ class CharactersController extends GetxController {
   @override
   void onReady() async {
     super.onReady();
+    await loadCharacters();
+  }
+
+  loadCharacters() async {
     characters = await charactersApi.getCharacters();
     update();
   }
