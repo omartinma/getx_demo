@@ -9,7 +9,8 @@ void main() {
 }
 
 void initDependencies() {
-  Get.lazyPut<CharactersApi>(() => CharactersApiImpl());
+  //Get.lazyPut<CharactersApi>(() => CharactersApiImpl());
+  //Another way
 }
 
 class MyApp extends StatelessWidget {
@@ -19,6 +20,14 @@ class MyApp extends StatelessWidget {
       title: 'GetX Demo',
       theme: ThemeData(),
       home: CharactersScreen(),
+      initialBinding: AppBindings(),
     );
+  }
+}
+
+class AppBindings extends Bindings {
+  @override
+  dependencies() {
+    Get.lazyPut<CharactersApi>(() => CharactersApiImpl());
   }
 }
