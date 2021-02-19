@@ -97,7 +97,7 @@ class CharacterGridElement extends StatelessWidget {
           child: IconButton(
             icon: Icon(
               character.favorite ? Icons.bookmark : Icons.bookmark_border,
-              color: Colors.red.shade600,
+              color: Colors.white,
             ),
             onPressed: () => onFavoritePressed(character),
           ),
