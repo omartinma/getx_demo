@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:get/get_state_manager/get_state_manager.dart';
 import 'package:getx_demo/core/models/character.dart';
-import 'package:getx_demo/core/services/characters_api.dart';
 import 'package:getx_demo/presentation/controllers/characters_controller.dart';
 import 'package:getx_demo/presentation/ui/character_details_screen.dart';
 
